@@ -58,7 +58,7 @@ p {
     /* There will be some elements-position:absolute inside */
     position: relative;
     /* background: url(../images/background.jpg) no-repeat center center/cover; */
-    background-image: url(../images/background.jpg);
+    background-image: url(../images/background-large.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
