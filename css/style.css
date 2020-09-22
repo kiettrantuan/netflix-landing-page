@@ -40,18 +40,21 @@ p {
     margin: 0.5rem 0;
 }
 
-img {
-    width: 100%;
+
+/* Clearing floats */
+.clearfix {
+    content: "";
+    display: table;
+    clear: both;
 }
 
-
-/* media: min-width ~931 ~1400 */
 
 /* Showcase */
 .showcase {
     width: 100%;
     /* 90/100 height of viewport */
-    height: 90vh;
+    /* height: 90vh; */
+    height: 760px;
     /* There will be some elements-position:absolute inside */
     position: relative;
     /* background: url(../images/background.jpg) no-repeat center center/cover; */
@@ -59,8 +62,6 @@ img {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    /* Behind black blur */
-    z-index: 0;
 }
 /* Black blur */
 .showcase::after {
@@ -82,21 +83,31 @@ img {
 }
 .showcase-top {
     position: relative;
-    height: 90px;
+    height: 5rem;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding-top: 20px;
+    margin: 0px 56px;
     z-index: 2;
 }
 .showcase-top img {
-    position: absolute;
-    width: 170px;
+    /* position: absolute;
     top: 50%;
     left: 5%;
-    transform: translate(-25%,-50%);
+    transform: translate(-25%,-50%); */
+    width: 167px;
+    float: left;
+    margin: 0.5rem 0px 0px;
 }
 .showcase-top a {
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     right: 5%;
-    transform: translate(50%,-50%);
+    transform: translate(50%,-50%); */
+    float: right;
+    margin: 0.5rem 0px 0px;
 }
 
 .showcase-content {
@@ -107,8 +118,8 @@ img {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 10rem;
     z-index: 2;
+    padding: 150px 0px;
 }
 .showcase-content h1 {
     font-weight: 700;
@@ -119,12 +130,219 @@ img {
     font-weight: normal;
     font-size: 1.75rem;
     line-height: 1.1;
-    margin: 1rem 0 1rem;
+    margin: 1rem 0;
 }
-.showcase-content h3 {
+
+
+/* Information Cards */
+.card {
+    padding: 75px 45px;
+    border-bottom: solid 0.5rem #222;
+}
+.card:first-of-type {
+    border-top: solid 0.5rem #222;
+}
+
+.card-story {
+    max-width: 60%;
+    margin: auto;
+    display: flex;
+    /* grid-template-columns: repeat(2,1fr); */
+    justify-content: center;
+    align-items: center;
+}
+.card-story__text{
+    padding-right: 3rem;
+}
+.card-story__text:nth-of-type(2){
+    padding-right: 0px;
+    padding-left: 3rem;
+}
+.card-story__text h1{
+    margin-bottom: 0.5rem;
+    font-size: 3rem;
+}
+.card-story__text h2{
+    margin-top: 1.2rem;
+}
+
+.card-story__content {
+    position: relative;
+}
+.card-story__content img{
+    width: 100%;
+}
+.card-story__content .card-video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+}
+.card-story__content .card-video__tv {
+    width: 75%;
+}
+.card-story__content .card-video__devices{
+    width: 65%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-85%);
+}
+
+.card-animation {
+    position: absolute;
+    width: 70%;
+    left: 50%;
+    bottom: 8%;
+    transform: translate(-50%);
+    display: flex;
+    align-items: center;
+    border: solid 2px rgba(255,255,255,0.25);
+    border-radius: 0.75rem;
+    background-color: #000;
+    overflow: hidden;
+}
+.card-animation img {
+    height: 4rem;
+    width: auto;
+    margin: 0.5rem;
+    margin-right: 1rem;
+}
+.card-animation img:last-of-type {
+    height: 3rem;
+    width: auto;
+    margin: 0.5rem;
+    margin-left: 1rem;
+}
+.card-animation__text {
+    width: 100%;
+}
+.card-animation__text h1 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+.card-animation__text h2 {
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: #0071eb;
+}
+
+.card-faq {
+    display: block;
+    margin: auto;
+    
+}
+.card-faq .card-story__text {
+    padding: 0;
+    text-align: center;
+    width: 75%;
+    margin: auto;
+}
+.card-faq .faq-list {
+    text-align: left;
+    margin: 2rem auto;
+}
+.faq-question {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 1.5rem 2rem;
+    text-align: left;
+    font-size: 1.6rem;
+    background-color: #303030;
+    color: #fff;
+    border: none;
+    border-bottom: solid 1px #000;
+    outline: none;
+    cursor: pointer;
+}
+.faq-question span {
+    float: right;
+    transition-duration: 0.2s;
+    transition-property: transform;
+}
+.fa-plus-rotate {
+    transform: rotate(45deg);
+}
+.faq-answer {
+    padding: 2rem;
+    text-align: left;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    background-color: #303030;
+    color: #fff;
+}
+.show {
+    display: block;
+}
+
+
+/* Email form */
+.form-email h3{
     line-height: 1.1;
-    margin: 1rem 0 1rem;
+    margin: 1rem 0;
+    text-align: center;
 }
+.form-email .input-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+}
+.form-email .input-main input {
+    float: left;
+    height: 100%;
+    min-width: 50%;
+    padding: 0 0.5rem;
+    font-size: 1rem;
+}
+.form-email .input-main input:focus {
+    outline: 0;
+}
+.form-email .input-main .btn {
+    float: right;
+    height: 100%;
+    padding: 0 2rem;
+    margin: 0;
+    margin-left: -5px;
+}
+
+
+/* Footer */
+.footer {
+    width: 50%;
+    margin: auto;
+}
+.footer a {
+    color: #999;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+.footer p {
+    margin: 2rem 0;
+    font-size: 0.8rem;
+}
+.footer-top {
+    margin: 4rem 0 1.5rem;
+}
+.footer-cols {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: center;
+    align-items: center;
+}
+.footer li {
+    line-height: 2rem;
+    font-size: 0.8rem;
+}
+.footer select {
+    margin-top: 1.5rem;
+    color: #999;
+    background-color: rgba(0,0,0,0);
+    padding: 1rem;
+    font-size: 1rem;
+}
+
 
 /* Buttons */
 .btn {
@@ -163,25 +381,13 @@ button.btn:hover {
     padding: 0.6rem 1.1rem;
 }
 
-/* Form */
-.input-main {
-    /* padding: 7px 17px; */
-    padding: 1.5rem 2.1rem;
-}
 
-/* Introduction */
-.introduction {
-    border-bottom: solid 8px #222;
-}
-.introduction:first-of-type {
-    border-top: solid 8px #222;
-}
+/* Media queries */
+@media only screen and (max-width: 949px) and (min-width: 550px),
+only screen and (max-width: 1449px) and (min-width: 950px),
+only screen and (min-width: 1450px) {}
 
-.introduction .container {
-    max-width: 90%;
-    margin: auto;
-    /* display: flexbox; */
-}
-.introduction img {
-    width: 50%;
-}
+@media only screen and (max-width: 949px) and (min-width: 550px) and (orientation: portrait),
+only screen and (max-width: 549px) and (min-width: 400px),
+only screen and (max-width: 399px) and (min-width: 350px),
+only screen and (max-width: 349px) {}
