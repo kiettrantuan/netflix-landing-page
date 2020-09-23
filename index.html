@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,16 @@
     <title>Netflix</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
+
 <body>
     <header class="showcase">
+        <div class="showcase-background">
+            <img srcset="/images/background-small.jpg 1000w,
+                /images/background-medium.jpg 1500w,
+                /images/background-large.jpg 1800w"
+                src="/images/background-small.jpg"
+                alt="Movies on Netflix">
+        </div>
         <div class="showcase-top">
             <h1 hidden>Header</h1>
             <img src="images/logo.png" alt="Netflix logo">
@@ -45,7 +54,7 @@
                     Apple TV, Blu-ray players, and more.</h2>
             </div>
             <div class="card-story__content">
-                <img src="images/tv.png" alt="TV">
+                <img class="card-img__tv" src="images/tv.png" alt="TV">
                 <!-- playsinline = not auto play in fullscreen when clicked -->
                 <video class="card-video card-video__tv" autoplay playsinline loop muted>
                     <source src="videos/tv-video.m4v" type="video/mp4">
@@ -55,9 +64,9 @@
         </div>
     </div>
     <div class="card">
-        <div class="card-story">
+        <div class="card-story flipped">
             <div class="card-story__content">
-                <img src="images/mobile.jpg" alt="Mobile">
+                <img class="card-img__mobile" src="images/mobile.jpg" alt="Mobile">
                 <div class="card-animation">
                     <img src="images/movie-cover.png" alt="Movie cover">
                     <div class="card-animation__text">
@@ -82,7 +91,7 @@
                     tablet, laptop, and TV without paying more.</h2>
             </div>
             <div class="card-story__content">
-                <img src="images/devices.png" alt="Mobile, PC, Tablet">
+                <img class="card-img__devices" src="images/devices.png" alt="Mobile, PC, Tablet">
                 <video class="card-video card-video__devices" autoplay playsinline loop muted>
                     <source src="videos/devices-video.m4v" type="video/mp4">
                     Your browser does not support the video tag.
@@ -186,7 +195,7 @@
                     </button>
                 </div>
                 <div class="clearfix"></div>
-            </form>  
+            </form>
         </div>
     </div>
 
@@ -205,13 +214,13 @@
                 <li><a href="#">Jobs</a></li>
                 <li><a href="#">Ways to Watch</a></li>
                 <li><a href="#">Terms of Use</a></li>
-                
+
                 <li><a href="#">Privacy</a></li>
                 <li><a href="#">Cookie Preferences</a></li>
                 <li><a href="#">Corporate Information</a></li>
                 <li><a href="#">Contact Us</a></li>
 
-                <li><a href="#">Speed Test</a></li>   
+                <li><a href="#">Speed Test</a></li>
                 <li><a href="#">Watch for Free</a></li>
                 <li><a href="#">Legal Notices</a></li>
                 <li><a href="#">Netflix Originals</a></li>
@@ -230,7 +239,7 @@
     </footer>
 
     <script src="js/main.js"></script>
-    <script src="https://kit.fontawesome.com/3967881443.js" 
-        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/3967881443.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

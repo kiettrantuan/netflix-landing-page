@@ -1,45 +1,67 @@
-/* Scope = root = <html> | variables: --main-color */
-:root {
-    --main-color: #e50914;
-}
-
-::placeholder{
-    /* 1rem = root = html = 16px */
-    font-size: 1rem;
-}
-
 * {
     box-sizing: border-box;
-    padding: 0px;
-    margin: 0px;
 }
 
-body {
-    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
-    /* webkit=safari-opera-chrome, moz=mozilla | not recommend antialiased*/
-    /* -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; */
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     background-color: #000;
-    color: #999;
+    color: #fff;
+    font-size: 16px;
+}
+body {
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+}
+a:active, a:hover {
+    outline: 0;
+}
+
+button, input, select {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+button {
+    overflow: visible;
+}
+button, select {
+    text-transform: none;
+}
+
+button, html input[type=button], input[type=submit] {
+    cursor: pointer;
+}
+input {
+    line-height: normal;
+}
+
+img {
+    border: 0;
 }
 
 ul {
     list-style: none;
 }
 
-h1, h2, h3, h4 {
-    color: #fff;
+h1 {
+    margin: 0 0 0.4em;
+}
+h2, h3 {
+    margin: 0.75em 0 0.25em;
 }
 
-a {
-    color: #fff;
-    text-decoration: none;
+:root {
+    --main-color: #e50914;
 }
 
-p {
-    margin: 0.5rem 0;
+::placeholder{
+    font-size: 1rem;
 }
-
 
 /* Clearing floats */
 .clearfix {
@@ -51,18 +73,76 @@ p {
 
 /* Showcase */
 .showcase {
-    width: 100%;
-    /* 90/100 height of viewport */
-    /* height: 90vh; */
-    height: 760px;
     /* There will be some elements-position:absolute inside */
     position: relative;
+    width: 100%;
+    height: 845.781px;
     /* background: url(../images/background.jpg) no-repeat center center/cover; */
-    background-image: url(../images/background-large.jpg);
-    background-size: cover;
+    /* background-image: url(../images/background-large.jpg); */
+    /* background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; */
 }
+@media only screen and (min-width:950px) and (max-width:1449px) {
+    .showcase {
+        height: 790.781px;
+    }
+}
+@media only screen and (min-width:740px) and (max-width:949px) {
+    .showcase {
+        height: 812px;
+    }
+}
+@media only screen and (min-width:586px) and (max-width:739px) {
+    .showcase {
+        height: 788px;
+    }
+}
+@media only screen and (min-width:550px) and (max-width:585px) {
+    .showcase {
+        height: 843px;
+    }
+}
+@media only screen and (min-width:444px) and (max-width:549px),
+only screen and (min-width:364px) and (max-width:399px) {
+    .showcase {
+        height: 540.391px;
+    }
+}
+@media only screen and (min-width:409px) and (max-width:443px) {
+    .showcase {
+        height: 570.391px;
+    }
+}
+@media only screen and (min-width:364px) and (max-width:408px) {
+    .showcase {
+        height: 593.391px;
+    }
+}
+@media only screen and (min-width:350px) and (max-width:363px) {
+    .showcase {
+        height: 563.391px;
+    }
+}
+@media only screen and (max-width:349px) {
+    .showcase {
+        height: 533.391px;
+    }
+}
+
+.showcase-background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.showcase-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* Black blur */
 .showcase::after {
     content: '';
@@ -71,16 +151,20 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    /* Behind top & content */
+    /* Above showcase & background-img */
     z-index: 1;
-    background-color: rgba(0,0,0,0.45);
+    background: rgba(0,0,0,0.4);
+    /* linear 0.8 - 0: 0% - 60%; 0 - 0.8: 60% - 100% */
+    background-image: linear-gradient(to top,rgba(0, 0, 0, 0.8) 0,
+        rgba(0,0,0,0) 60%,rgba(0, 0, 0, 0.8) 100%);
     /* inset=inner-shadow | horizontal vertical blur spread color
     negative value of h- & v- is left & above
     negative value of spread descrease the size of shadow
     inset invert value: negative h- & v- = right & below
     inset spread:-100 => left:-100 top:100 blur:200 color:black */
-    box-shadow: inset 0px 200px 200px -100px #000, inset 0px -200px 200px -100px #000;
+    /* box-shadow: inset 0px 200px 200px -100px #000, inset 0px -200px 200px -100px #000; */
 }
+
 .showcase-top {
     position: relative;
     height: 5rem;
@@ -97,7 +181,7 @@ p {
     top: 50%;
     left: 5%;
     transform: translate(-25%,-50%); */
-    width: 167px;
+    /* width: 167px; */
     float: left;
     margin: 0.5rem 0px 0px;
 }
@@ -110,67 +194,191 @@ p {
     margin: 0.5rem 0px 0px;
 }
 
-.showcase-content {
-    position: relative;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    z-index: 2;
-    padding: 150px 0px;
-}
-.showcase-content h1 {
-    font-weight: 700;
-    font-size: 4rem;
-    line-height: 1.1;
-}
-.showcase-content h2 {
-    font-weight: normal;
-    font-size: 1.75rem;
-    line-height: 1.1;
-    margin: 1rem 0;
+/* All h3 */
+h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
 }
 
+.showcase-content {
+    position: relative;
+    width: 100%;
+    max-width: 950px;
+    padding: 75px 0;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 2;
+}
+@media only screen and (min-width:400px) and (max-width:549px) {
+    .showcase-content {
+        padding: 30px 0
+    }
+}
+@media only screen and (min-width:350px) and (max-width:399px) {
+    .showcase-content {
+        padding: 15px 0
+    }
+}
+@media only screen and (max-width:349px) {
+    .showcase-content {
+        padding: 0
+    }
+}
+
+.showcase-content h1, .showcase-content h2 {
+    max-width: 640px;
+    margin: 0 auto;
+}
+@media only screen and (min-width: 1450px) {
+    .showcase-content h1, .showcase-content h2 {
+        max-width: 800px;
+    }
+}
+.showcase-content h1 {
+    font-size: 1.75rem;
+    line-height: 1.1;
+    margin: 0 auto;
+}
+@media only screen and (min-width:550px) and (max-width:949px) {
+    .showcase-content h1 {
+        font-size: 3.125rem;
+    }
+}
+@media only screen and (min-width:950px) and (max-width:1449px),
+only screen and (min-width:1450px) {
+    .showcase-content h1 {
+        font-size: 4rem;
+    }
+}
+.showcase-content h2 {
+    font-size: 1.125rem;
+    margin: 1rem auto;
+}
+@media only screen and (min-width:550px) and (max-width:949px),
+only screen and (min-width:950px) and (max-width:1449px),
+only screen and (min-width:1450px) {
+    .showcase-content h2 {
+        font-size: 1.625rem;
+    }
+}
 
 /* Information Cards */
 .card {
-    padding: 75px 45px;
+    padding: 50px 5%;
     border-bottom: solid 0.5rem #222;
 }
 .card:first-of-type {
     border-top: solid 0.5rem #222;
 }
+@media only screen and (min-width:550px) and (max-width:949px),
+only screen and (min-width:950px) and (max-width:1449px),
+only screen and (min-width:1450px) {
+    .card {
+        padding: 70px 45px;
+    }
+}
 
 .card-story {
-    max-width: 60%;
-    margin: auto;
+    max-width: 1100px;
+    margin: 0 auto;
+    /* display: grid;
+    grid-template-columns: repeat(2,1fr); */
     display: flex;
-    /* grid-template-columns: repeat(2,1fr); */
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
 }
-.card-story__text{
+@media only screen and (min-width:550px) and (max-width:949px),
+only screen and (min-width:400px) and (max-width:549px),
+only screen and (min-width:350px) and (max-width:399px),
+only screen and (max-width:349px) {
+    .card-story {
+        flex-direction: column;
+    }
+    .card-story.flipped {
+        flex-direction: column-reverse;
+    }
+}
+
+.card-story__text {
+    width: 52%;
+    position: relative;
+    flex-grow: 0;
     padding-right: 3rem;
+    margin: -5% 0;
+    z-index: 2;
+    box-sizing: content-box;
 }
-.card-story__text:nth-of-type(2){
+.card-story__text.flipped {
     padding-right: 0px;
     padding-left: 3rem;
 }
-.card-story__text h1{
-    margin-bottom: 0.5rem;
-    font-size: 3rem;
+@media only screen and (min-width:550px) and (max-width:949px),
+only screen and (min-width:400px) and (max-width:549px),
+only screen and (min-width:350px) and (max-width:399px),
+only screen and (max-width:349px) {
+    .card-story__text {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
 }
-.card-story__text h2{
-    margin-top: 1.2rem;
+
+.card-story__text h1 {
+    font-size: 3.125rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;;
+}
+@media only screen and (min-width:550px) and (max-width:949px) {
+    .card-story__text h1 {
+        font-size: 2.5rem;
+    }
+}
+@media only screen and (min-width:400px) and (max-width:549px),
+only screen and (min-width:350px) and (max-width:399px),
+only screen and (max-width:349px) {
+    .card-story__text h1 {
+        font-size: 1.625rem;
+    }
+}
+.card-story__text h2 {
+    font-size: 1.625rem;
+    font-weight: 400
+}
+@media only screen and (min-width:550px) and (max-width:949px) {
+    .card-story__text h2 {
+        font-size: 1.25rem;
+    }
+}
+@media only screen and (min-width:400px) and (max-width:549px),
+only screen and (min-width:350px) and (max-width:399px),
+only screen and (max-width:349px) {
+    .card-story__text h2 {
+        font-size: 1.125rem;
+    }
 }
 
 .card-story__content {
     position: relative;
+    width: 48%;
+    height: 100%;
+    z-index: 1;
 }
+@media only screen and (min-width:550px) and (max-width:949px),
+only screen and (min-width:400px) and (max-width:549px),
+only screen and (min-width:350px) and (max-width:399px),
+only screen and (max-width:349px) {
+    .card-story__content {
+        width: 100%;
+        height: 100%;
+        max-width: 600px;
+        margin-top: 1rem;
+    }
+}
+
 .card-story__content img{
     width: 100%;
+    height: 100%;
 }
 .card-story__content .card-video{
     position: absolute;
@@ -182,38 +390,107 @@ p {
 .card-story__content .card-video__tv {
     width: 75%;
 }
-.card-story__content .card-video__devices{
+.card-story__content .card-video__devices {
     width: 65%;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-85%);
 }
 
+.card-story__content .card-img__tv {
+    margin: -10% -5% -5% 0;
+}
+@media only screen and (min-width:550px) and (max-width:949px),
+only screen and (min-width:400px) and (max-width:549px),
+only screen and (min-width:350px) and (max-width:399px),
+only screen and (max-width:349px) {
+    .card-story__content .card-img__tv {
+        margin: -10% 0 0 0;
+    }
+}
+.card-story__content .card-img__devices {
+    margin: -5% -10% 0 0;
+}
+@media only screen and (min-width:550px) and (max-width:949px),
+only screen and (min-width:400px) and (max-width:549px),
+only screen and (min-width:350px) and (max-width:399px),
+only screen and (max-width:349px) {
+    .card-story__content .card-img__devices {
+        margin: 0;
+    }
+}
+.card-story__content .card-img__mobile {
+    margin: -8% 0 -4% -15%;
+    min-height: 100px;
+    width: 100%
+}
+@media only screen and (min-width:550px) and (max-width:949px),
+only screen and (min-width:400px) and (max-width:549px),
+only screen and (min-width:350px) and (max-width:399px),
+only screen and (max-width:349px) {
+    .card-story__content .card-img__mobile {
+        margin: -8% 0 0 0;
+    }
+}
+
+
 .card-animation {
     position: absolute;
-    width: 70%;
+    width: 60%;
     left: 50%;
     bottom: 8%;
     transform: translate(-50%);
     display: flex;
     align-items: center;
+    min-width: 15rem;
+    padding: 0.25rem 0.65rem;
     border: solid 2px rgba(255,255,255,0.25);
     border-radius: 0.75rem;
     background-color: #000;
     overflow: hidden;
 }
+@media only screen and (min-width:400px) and (max-width:549px),
+only screen and (min-width:550px) and (max-width:949px) {
+    .card-animation {
+        padding: 0.35rem 0.75rem;
+    }
+}
+@media only screen and (min-width:950px) and (max-width:1449px),
+only screen and (min-width:1450px) {
+    .card-animation {
+        padding: 0.5rem 0.75rem;
+        left: 35%;
+    }
+}
+
 .card-animation img {
-    height: 4rem;
+    height: 3rem;
     width: auto;
-    margin: 0.5rem;
     margin-right: 1rem;
+    flex: none;
 }
 .card-animation img:last-of-type {
     height: 3rem;
     width: auto;
-    margin: 0.5rem;
+    margin-right: 0.5rem;
     margin-left: 1rem;
 }
+@media only screen and (min-width:550px) and (max-width:949px) {
+    .card-animation img {
+        height: 4rem;
+    }
+}
+@media only screen and (min-width:950px) and (max-width:1449px) {
+    .card-animation img {
+        height: 4.5rem;
+    }
+}
+@media only screen and (min-width:1450px) {
+    .card-animation img {
+        height: 5rem;
+    }
+}
+
 .card-animation__text {
     width: 100%;
 }
@@ -311,6 +588,7 @@ p {
 .footer {
     width: 50%;
     margin: auto;
+    padding-bottom: 0;
 }
 .footer a {
     color: #999;
