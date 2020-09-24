@@ -20,13 +20,17 @@
                 alt="Movies on Netflix">
         </div>
         <div class="showcase-top">
-            <h1 hidden>Header</h1>
-            <img src="images/logo.png" alt="Netflix logo">
-            <a href="#" class="btn btn-rounded">Sign in</a>
+            <div class="showcase-top-content">
+                <div class="showcase-top--margin">
+                    <h1 hidden>Header</h1>
+                    <img src="images/logo.png" alt="Netflix logo">
+                    <a href="#">Sign in</a>
+                </div>
+            </div>
         </div>
         <div class="clearfix"></div>
         <div class="showcase-content">
-            <h1>100%&nbsp;entertainment.<br>
+            <h1>100% entertainment.<br>
                 90,000&nbsp;₫ for your first 30 days.</h1>
             <h2>Watch anywhere. Cancel anytime.</h2>
             <form class="form-email">
@@ -35,13 +39,17 @@
                 <div class="input-main">
                     <input type="email" placeholder="Email address">
                     <!-- &nbsp; - space won't break into new line  -->
-                    <button class="btn btn-xl">
-                        TRY NOW FOR 20,000&nbsp;₫
-                        <span class="fas fa-angle-right"></span>
+                    <button class="btn btn-lg">
+                        <span class="btn-content">
+                            <span class="btn-text btn-text--long">
+                                TRY NOW FOR 20,000&nbsp;₫
+                            </span>
+                            <span class="fas fa-angle-right"></span>
+                        </span>
                     </button>
                 </div>
                 <div class="clearfix"></div>
-                <h3>Only new members are eligible for this offer.</h3>
+                <h4 class="sub-info">Only new members are eligible for this offer.</h4>
             </form>
         </div>
     </header>
@@ -62,6 +70,7 @@
                 </video>
             </div>
         </div>
+        <div class="clearfix"></div>
     </div>
     <div class="card">
         <div class="card-story flipped">
@@ -82,6 +91,7 @@
                     something to watch.</h2>
             </div>
         </div>
+        <div class="clearfix"></div>
     </div>
     <div class="card">
         <div class="card-story">
@@ -98,9 +108,10 @@
                 </video>
             </div>
         </div>
+        <div class="clearfix"></div>
     </div>
 
-    <div class="card">
+    <div class="card faq">
         <div class="card-story card-faq">
             <div class="card-story__text">
                 <h1>Frequently Asked Questions</h1>
@@ -189,53 +200,59 @@
                 <div class="input-main">
                     <input type="email" placeholder="Email address">
                     <!-- &nbsp; - space won't break into new line  -->
-                    <button class="btn btn-xl">
-                        GET STARTED
-                        <span class="fas fa-angle-right"></span>
+                    <button class="btn btn-lg">
+                        <span class="btn-content">
+                            <span class="btn-text">
+                                GET NOW
+                            </span>
+                            <span class="fas fa-angle-right"></span>
+                        </span>
                     </button>
                 </div>
                 <div class="clearfix"></div>
             </form>
         </div>
+        <div class="clearfix"></div>
     </div>
 
     <footer class="footer">
-        <div class="footer-top">
-            <a href="#">Questions? Contact Us</a>
-        </div>
         <div class="footer-container">
-            <ul class="footer-cols">
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Help Center</a></li>
-                <li><a href="#">Account</a></li>
-                <li><a href="#">Media Center</a></li>
+            <div class="footer-top">
+                <a href="#">Questions? Contact Us</a>
+            </div>
+            <div class="footer-content">
+                <ul class="footer-cols">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Media Center</a></li>
 
-                <li><a href="#">Investor Relations</a></li>
-                <li><a href="#">Jobs</a></li>
-                <li><a href="#">Ways to Watch</a></li>
-                <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Ways to Watch</a></li>
+                    <li><a href="#">Terms of Use</a></li>
 
-                <li><a href="#">Privacy</a></li>
-                <li><a href="#">Cookie Preferences</a></li>
-                <li><a href="#">Corporate Information</a></li>
-                <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Cookie Preferences</a></li>
+                    <li><a href="#">Corporate Information</a></li>
+                    <li><a href="#">Contact Us</a></li>
 
-                <li><a href="#">Speed Test</a></li>
-                <li><a href="#">Watch for Free</a></li>
-                <li><a href="#">Legal Notices</a></li>
-                <li><a href="#">Netflix Originals</a></li>
-            </ul>
+                    <li><a href="#">Speed Test</a></li>
+                    <li><a href="#">Watch for Free</a></li>
+                    <li><a href="#">Legal Notices</a></li>
+                    <li><a href="#">Netflix Originals</a></li>
+                </ul>
+            </div>
+            <select>
+                <option value="en">
+                    English
+                </option>
+                <option value="vi">
+                    Tiếng Việt
+                </option>
+            </select>
+            <p>Netflix Vietnam</p>
         </div>
-        <select>
-            aaaaaaaaaaaaaaaaa
-            <option value="en">
-                English
-            </option>
-            <option value="vi">
-                Tiếng Việt
-            </option>
-        </select>
-        <p>Netflix Vietnam</p>
     </footer>
 
     <script src="js/main.js"></script>
