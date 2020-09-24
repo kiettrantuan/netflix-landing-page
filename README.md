@@ -6,3 +6,5 @@ Netflix landing page clone with only HTML, CSS, JavaScript
 
 - [x] Basic layout
 - [x] Media queries
+
+
