@@ -29,28 +29,30 @@
             </div>
         </div>
         <div class="clearfix"></div>
-        <div class="showcase-content">
-            <h1>100% entertainment.<br>
-                90,000&nbsp;₫ for your first 30 days.</h1>
-            <h2>Watch anywhere. Cancel anytime.</h2>
-            <form class="form-email">
-                <h3>Ready to watch? Enter your email to
-                    create or restart your membership.</h3>
-                <div class="input-main">
-                    <input type="email" placeholder="Email address">
-                    <!-- &nbsp; - space won't break into new line  -->
-                    <button class="btn btn-lg">
-                        <span class="btn-content">
-                            <span class="btn-text btn-text--long">
-                                TRY NOW FOR 20,000&nbsp;₫
+        <div class="showcase-body">
+            <div class="showcase-content">
+                <h1>100% entertainment.<br>
+                    90,000&nbsp;₫ for your first 30 days.</h1>
+                <h2>Watch anywhere. Cancel anytime.</h2>
+                <form class="form-email">
+                    <h3>Ready to watch? Enter your email to
+                        create or restart your membership.</h3>
+                    <div class="input-main">
+                        <input type="email" placeholder="Email address">
+                        <!-- &nbsp; - space won't break into new line  -->
+                        <button class="btn btn-lg">
+                            <span class="btn-content">
+                                <span class="btn-text btn-text--long">
+                                    TRY NOW FOR 90,000&nbsp;₫
+                                </span>
+                                <span class="fas fa-angle-right"></span>
                             </span>
-                            <span class="fas fa-angle-right"></span>
-                        </span>
-                    </button>
-                </div>
-                <div class="clearfix"></div>
-                <h4 class="sub-info">Only new members are eligible for this offer.</h4>
-            </form>
+                        </button>
+                    </div>
+                    <div class="clearfix"></div>
+                    <h4 class="sub-info">Only new members are eligible for this offer.</h4>
+                </form>
+            </div>
         </div>
     </header>
 
@@ -62,12 +64,14 @@
                     Apple TV, Blu-ray players, and more.</h2>
             </div>
             <div class="card-story__content">
-                <img class="card-img__tv" src="images/tv.png" alt="TV">
-                <!-- playsinline = not auto play in fullscreen when clicked -->
-                <video class="card-video card-video__tv" autoplay playsinline loop muted>
-                    <source src="videos/tv-video.m4v" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <div class="card-img__tv">
+                    <img src="images/tv.png" alt="TV">
+                    <!-- playsinline = not auto play in fullscreen when clicked -->
+                    <video class="card-video card-video__tv" autoplay playsinline loop muted>
+                        <source src="videos/tv-video.m4v" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
         </div>
         <div class="clearfix"></div>
@@ -75,14 +79,16 @@
     <div class="card">
         <div class="card-story flipped">
             <div class="card-story__content">
-                <img class="card-img__mobile" src="images/mobile.jpg" alt="Mobile">
-                <div class="card-animation">
-                    <img src="images/movie-cover.png" alt="Movie cover">
-                    <div class="card-animation__text">
-                        <h1>Stranger Things</h1>
-                        <h2>Downloading...</h2>
+                <div class="card-img__mobile">
+                    <img src="images/mobile.jpg" alt="Mobile">
+                    <div class="card-animation">
+                        <img src="images/movie-cover.png" alt="Movie cover">
+                        <div class="card-animation__text">
+                            <h1>Stranger Things</h1>
+                            <h2>Downloading...</h2>
+                        </div>
+                        <img src="images/download-icon.gif" alt="Download icon">
                     </div>
-                    <img src="images/download-icon.gif" alt="Download icon">
                 </div>
             </div>
             <div class="card-story__text">
@@ -101,11 +107,13 @@
                     tablet, laptop, and TV without paying more.</h2>
             </div>
             <div class="card-story__content">
-                <img class="card-img__devices" src="images/devices.png" alt="Mobile, PC, Tablet">
-                <video class="card-video card-video__devices" autoplay playsinline loop muted>
-                    <source src="videos/devices-video.m4v" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <div class="card-img__devices">
+                    <img src="images/devices.png" alt="Mobile, PC, Tablet">
+                    <video class="card-video card-video__devices" autoplay playsinline loop muted>
+                        <source src="videos/devices-video.m4v" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
         </div>
         <div class="clearfix"></div>
@@ -118,7 +126,7 @@
                 <ul class="faq-list">
                     <li>
                         <button id="faq-1" class="faq-question">
-                            What is Netflix?
+                            <h2>What is Netflix?</h2>
                             <span id="faq-1-icon" class="fas fa-plus"></span>
                         </button>
                         <div id="faq-1-answer" class="faq-answer" hidden>
@@ -136,7 +144,7 @@
                     </li>
                     <li>
                         <button id="faq-2" class="faq-question">
-                            How much Netflix cost?
+                            <h2>How much Netflix cost?</h2>
                             <span id="faq-2-icon" class="fas fa-plus"></span>
                         </button>
                         <div id="faq-2-answer" class="faq-answer" hidden>
@@ -149,7 +157,7 @@
                     </li>
                     <li>
                         <button id="faq-3" class="faq-question">
-                            Where can I watch?
+                            <h2>Where can I watch?</h2>
                             <span id="faq-3-icon" class="fas fa-plus"></span>
                         </button>
                         <div id="faq-3-answer" class="faq-answer" hidden>
@@ -168,7 +176,7 @@
                     </li>
                     <li>
                         <button id="faq-4" class="faq-question">
-                            How do I cancel?
+                            <h2>How do I cancel?</h2>
                             <span id="faq-4-icon" class="fas fa-plus"></span>
                         </button>
                         <div id="faq-4-answer" class="faq-answer" hidden>
@@ -181,7 +189,7 @@
                     </li>
                     <li>
                         <button id="faq-5" class="faq-question">
-                            What can I watch Netflix?
+                            <h2>What can I watch Netflix?</h2>
                             <span id="faq-5-icon" class="fas fa-plus"></span>
                         </button>
                         <div id="faq-5-answer" class="faq-answer" hidden>
@@ -203,7 +211,7 @@
                     <button class="btn btn-lg">
                         <span class="btn-content">
                             <span class="btn-text">
-                                GET NOW
+                                GET STARTED
                             </span>
                             <span class="fas fa-angle-right"></span>
                         </span>

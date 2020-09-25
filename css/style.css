@@ -42,7 +42,7 @@ img {
 h1 {
     margin: 0 0 0.4em;
 }
-h2, h3 {
+h2, h3, h4 {
     margin: 0.75em 0 0.25em;
 }
 h1, h2, h3, h4 {
@@ -64,76 +64,85 @@ h1, h2, h3, h4 {
     clear: both;
 }
 
-/* Box sizing border box */
-/* * {
-    box-sizing: border-box;
-} */
-
 /* Showcase */
 .showcase {
     /* There will be some elements-position:absolute inside */
     position: relative;
     width: 100%;
-    height: 845.781px;
-    padding: 50px 5%;
+    /* height: 845.781px; */
+    height: 853.781px;
+    /* padding: 50px 5%; */
     box-sizing: border-box;
+    border-bottom: solid 0.5rem #222;
     /* background: url(../images/background.jpg) no-repeat center center/cover; */
     /* background-image: url(../images/background-large.jpg); */
     /* background-size: cover;
     background-repeat: no-repeat;
     background-position: center; */
 }
+/* .showcase-body {
+    padding: 50px 5%;
+} */
 @media only screen and (min-width:550px) and (max-width:949px),
 only screen and (min-width:950px) and (max-width:1449px),
 only screen and (min-width:1450px) {
-    .showcase {
-        padding: 70px 45px;
+    .showcase-body {
+        /* padding: 70px 45px; */
     }
 }
 @media only screen and (min-width:950px) and (max-width:1449px) {
     .showcase {
-        height: 790.781px;
+        /* height: 790.781px; */
+        height: 788.781px;
     }
 }
 @media only screen and (min-width:740px) and (max-width:949px) {
     .showcase {
-        height: 812px;
+        /* height: 812px; */
+        height: 815px;
     }
 }
 @media only screen and (min-width:586px) and (max-width:739px) {
     .showcase {
-        height: 788px;
+        /* height: 788px; */
+        height: 791px;
     }
 }
 @media only screen and (min-width:550px) and (max-width:585px) {
     .showcase {
-        height: 843px;
+        /* height: 843px; */
+        height: 846px;
     }
 }
 @media only screen and (min-width:444px) and (max-width:549px),
 only screen and (min-width:364px) and (max-width:399px) {
     .showcase {
-        height: 540.391px;
+        /* height: 540.391px; */
+        height: 543.391px;
     }
 }
 @media only screen and (min-width:409px) and (max-width:443px) {
     .showcase {
-        height: 570.391px;
+        /* height: 570.391px; */
+        height: 573.391px;
     }
 }
 @media only screen and (min-width:400px) and (max-width:408px) {
     .showcase {
-        height: 593.391px;
+        /* height: 593.391px; */
+        height: 596.391px;
     }
 }
 @media only screen and (min-width:350px) and (max-width:363px) {
     .showcase {
-        height: 563.391px;
+        /* height: 563.391px; */
+        height: 566.391px;
     }
 }
 @media only screen and (max-width:349px) {
     .showcase {
-        height: 533.391px;
+        /* height: 533.391px; */
+        height: 536.391px;
     }
 }
 
@@ -194,6 +203,10 @@ only screen and (min-width:364px) and (max-width:399px) {
     padding-top: 20px;
     z-index: 2;
 }
+.showcase {
+    box-sizing: border-box;
+    padding: 170px 45px 70px;
+}
 .showcase-top--margin {
     /* position: relative; */
     margin: 0 3.5rem;
@@ -203,6 +216,9 @@ only screen and (min-width:364px) and (max-width:399px) {
     .showcase-top-content {
         height: 4rem;
     }
+    .showcase {
+        padding: 154px 5% 70px;
+    }
 }
 @media only screen and (min-width:550px) and (max-width:949px) {
     .showcase-top--margin {
@@ -210,6 +226,9 @@ only screen and (min-width:364px) and (max-width:399px) {
     }
     .showcase-top-content {
         height: 45px;
+    }
+    .showcase {
+        padding: 135px 5% 70px;
     }
 }
 @media only screen and (min-width:400px) and (max-width:549px),
@@ -220,6 +239,9 @@ only screen and (max-width:349px) {
     }
     .showcase-top-content {
         height: 45px;
+    }
+    .showcase {
+        padding: 114px 5% 50px;
     }
 }
 
@@ -327,9 +349,9 @@ only screen and (min-width:950px) and (max-width:1449px) {
     padding: 50px 5%;
     border-bottom: solid 0.5rem #222;
 }
-.card:first-of-type {
+/* .card:first-of-type {
     border-top: solid 0.5rem #222;
-}
+} */
 @media only screen and (min-width:550px) and (max-width:949px),
 only screen and (min-width:950px) and (max-width:1449px),
 only screen and (min-width:1450px) {
@@ -391,7 +413,7 @@ only screen and (max-width:349px) {
     line-height: 1.1;
     margin-bottom: 0.5rem;;
 }
-.card-story__text h2 {
+.card-story__text h2, .card-story__text ul.faq-list {
     font-size: 1.625rem;
     font-weight: 400
 }
@@ -399,7 +421,7 @@ only screen and (max-width:349px) {
     .card-story__text h1 {
         font-size: 2.5rem;
     }
-    .card-story__text h2 {
+    .card-story__text h2, .card-story__text ul.faq-list {
         font-size: 1.25rem;
     }
 }
@@ -409,21 +431,27 @@ only screen and (max-width:349px) {
     .card-story__text h1 {
         font-size: 1.625rem;
     }
-    .card-story__text h2 {
+    .card-story__text h2, .card-story__text ul.faq-list {
         font-size: 1.125rem;
     }
 }   
 
 /* ICs: Animations aside Text */
 .card-story__content {
-    position: relative;
     width: 48%;
+    box-sizing: border-box;
+}
+.card-story__content .card-img__tv,
+.card-story__content .card-img__devices,
+.card-story__content .card-img__mobile {
+    position: relative;
+    /* width: 48%; */
     height: 100%;
     z-index: 1;
 }
 .card-story__content img{
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    height: auto;
 }
 .card-story__content .card-video{
     position: absolute;
@@ -434,11 +462,11 @@ only screen and (max-width:349px) {
 }
 .card-story__content .card-video__tv {
     width: 75%;
-    top: 44%;
+    top: 48%;
 }
 .card-story__content .card-video__devices {
     width: 62%;
-    top: 28%;
+    top: 34%;
 }
 .card-story__content .card-img__tv {
     margin: -10% -5% -5% 0;
@@ -460,12 +488,6 @@ only screen and (max-width:349px) {
         height: 100%;
         max-width: 600px;
         margin-top: 1rem;
-    }
-    .card-story__content .card-video__tv {
-        top: 40%;
-    }
-    .card-story__content .card-video__devices {
-        top: 32%;
     }
     .card-story__content .card-img__tv {
         margin: -10% 0 0 0;
@@ -504,7 +526,7 @@ only screen and (min-width:550px) and (max-width:949px) {
 only screen and (min-width:1450px) {
     .card-animation {
         padding: 0.5rem 0.75rem;
-        left: 35%;
+        /* left: 35%; */
     }
 }
 
@@ -587,20 +609,20 @@ only screen and (max-width:349px) {
 }
 .card-faq .faq-list {
     max-width: 815px;
-    margin: 1.25rem auto;
+    margin: 1.25em auto;
     padding: 0;
 }
 @media only screen and (min-width:550px) and (max-width:949px) {
     .card-faq .faq-list {
         width: 90%;
-        margin: 1.5rem auto;
+        margin: 1.5em auto;
     }
 }
 @media only screen and (min-width:950px) and (max-width:1449px),
 only screen and (min-width:1450px) {
     .card-faq .faq-list {
         width: 75%;
-        margin: 2rem auto;
+        margin: 2em auto;
     }
 }
 
@@ -608,7 +630,7 @@ only screen and (min-width:1450px) {
     list-style: none;
 }
 .card-faq li {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.5rem;
 }
 
 .faq-question {
@@ -616,7 +638,7 @@ only screen and (min-width:1450px) {
     width: 100%;
     margin-bottom: 1px;
     padding: 0.8em 2.2em 0.8em 1.2em;
-    font-size: 1.6rem;
+    /* font-size: 1.6rem; */
     text-align: left;
     font-weight: 400;
     color: #fff;
@@ -624,6 +646,10 @@ only screen and (min-width:1450px) {
     outline: none;
     border: none;
 }
+/* Cause of Font => Netflix seems bigger than Helvetica */
+/* .faq-question h2 {
+    margin: 2px 0 0;
+} */
 .faq-question span {
     position: absolute;
     right: 1em;
@@ -637,7 +663,7 @@ only screen and (min-width:1450px) {
 .faq-answer {
     max-height: 1200px;
     padding: 1.2em;
-    font-size: 1.6rem;
+    /* font-size: 1.6rem; */
     line-height: 2rem;
     text-align: left;
     background-color: #303030;
@@ -647,10 +673,9 @@ only screen and (min-width:1450px) {
     display: block;
 }
 
-
-
 /* Footer */
 .footer {
+    box-sizing: border-box;
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
@@ -739,6 +764,9 @@ only screen and (min-width: 1450px) {
 .form-email {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
 }
 @media only screen and (min-width:950px) and (max-width:1449px),
 only screen and (min-width:1450px) {
@@ -747,7 +775,21 @@ only screen and (min-width:1450px) {
         padding-top: 0.85rem;
     }
 }
-
+@media only screen and (min-width:400px) and (max-width:549px),
+only screen and (min-width:350px) and (max-width:399px),
+only screen and (max-width:349px) {
+    .card-faq .form-email {
+        padding: 0 5%;
+    }
+}
+h3 {
+    font-size: 18px;
+}
+@media screen and (min-width:740px) {
+    h3 {
+        font-size: 23px;
+    }
+}
 .form-email h3 {
     padding: 0 5%;
     max-width: 450px;
@@ -794,17 +836,21 @@ only screen and (max-width:349px) {
     align-items: center;
     /* height: 4rem; */
     margin: 0 auto;
+    width: 100%;
 }
 .form-email .input-main input {
     float: left;
-    height: 40px;
+    max-width: 500px;
+    /* width: 100%; */
+    height: 60px;
     box-sizing: border-box;
     outline: 0;
+    padding: 0 10px 0;
 }
 @media only screen and (min-width:950px) and (max-width:1449px) {
     .form-email .input-main input {
         min-width: 450px;
-        height: 60px;
+        /* height: 60px; */
     }
 }
 @media only screen and (min-width:1450px) {
@@ -815,13 +861,20 @@ only screen and (max-width:349px) {
 }
 @media only screen and (max-width:949px) {
     .form-email .input-main {
-        display: block;
+        /* display: block; */
+        flex-direction: column;
     }
     .form-email .input-main input {
         height: 48px;
         width: 100%;
-        padding: 0 10px 0;
+        /* padding: 0 10px 0; */
         margin: 10px auto;
+        /* height: 60px; */
+    }
+}
+@media only screen and (max-width:739px) {
+    .form-email .input-main input {
+        height: 48px;
     }
 }
 
