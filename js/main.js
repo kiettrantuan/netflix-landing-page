@@ -29,8 +29,12 @@ function selectItem(e) {
 }
 
 // Remove .show from all faq answers
+// Make all plus icon back to its initial: remove rotate(45deg)
 function removeShow() {
 	faqItemAs.forEach( i => {
 		i.classList.remove('show');
+    });
+    faqIcons.forEach( i => {
+		i.classList.remove('fa-plus-rotate');
 	});
 }

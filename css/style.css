@@ -83,13 +83,13 @@ h1, h2, h3, h4 {
 /* .showcase-body {
     padding: 50px 5%;
 } */
-@media only screen and (min-width:550px) and (max-width:949px),
+/* @media only screen and (min-width:550px) and (max-width:949px),
 only screen and (min-width:950px) and (max-width:1449px),
 only screen and (min-width:1450px) {
     .showcase-body {
-        /* padding: 70px 45px; */
+        padding: 70px 45px;
     }
-}
+} */
 @media only screen and (min-width:950px) and (max-width:1449px) {
     .showcase {
         /* height: 790.781px; */
@@ -392,7 +392,7 @@ only screen and (max-width:349px) {
     z-index: 2;
     box-sizing: content-box;
 }
-.card-story__text.flipped {
+.card-story.flipped .card-story__text {
     padding-right: 0px;
     padding-left: 3rem;
 }
@@ -647,9 +647,9 @@ only screen and (min-width:1450px) {
     border: none;
 }
 /* Cause of Font => Netflix seems bigger than Helvetica */
-/* .faq-question h2 {
-    margin: 2px 0 0;
-} */
+.faq-question h2 {
+    margin: 1px 0 1px;
+}
 .faq-question span {
     position: absolute;
     right: 1em;
